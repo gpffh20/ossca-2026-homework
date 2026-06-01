@@ -1,6 +1,6 @@
 package main
 
-//go:generate go run github.com/cilium/ebpf/cmd/bpf2go -cc clang -cflags "-O2 -Wall" Xdp bpf/xdp.c
+//go:generate go run github.com/cilium/ebpf/cmd/bpf2go -no-strip -target bpfel -cc clang -cflags "-O2 -Wall" Xdp bpf/xdp.c
 
 import (
 	"encoding/json"
